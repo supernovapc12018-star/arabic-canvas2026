@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic Academy - Learn Arabic Words</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        /* Banner Section */
+        .banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .banner p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        /* Card Style */
+        .card {
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+        }
+
+        .card-arabic {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            direction: rtl;
+            font-family: 'Arabic Typesetting', 'Arial Unicode MS', Arial, sans-serif;
+        }
+
+        .card-english {
+            font-size: 18px;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .banner h1 {
+                font-size: 36px;
+            }
+
+            .banner p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .banner h1 {
+                font-size: 28px;
+            }
+
+            .banner p {
+                font-size: 14px;
+            }
+
+            .card-arabic {
+                font-size: 24px;
+            }
+
+            .card-english {
+                font-size: 14px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner Section -->
+    <header class="banner">
+        <h1>Arabic Academy by LearnyDays</h1>
+        <p>Master Arabic vocabulary with our interactive learning cards. Start your journey to fluency today!</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="cards-grid">
+            <!-- Card 1 -->
+            <div class="card" style="background-color: #FF6B6B;">
+                <div class="card-arabic">كتاب</div>
+                <div class="card-english">Book</div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card" style="background-color: #4ECDC4;">
+                <div class="card-arabic">قلم</div>
+                <div class="card-english">Pen</div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card" style="background-color: #FFE66D;">
+                <div class="card-arabic">شمس</div>
+                <div class="card-english">Sun</div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card" style="background-color: #95E1D3;">
+                <div class="card-arabic">ماء</div>
+                <div class="card-english">Water</div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card" style="background-color: #F38181;">
+                <div class="card-arabic">نار</div>
+                <div class="card-english">Fire</div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card" style="background-color: #AA96DA;">
+                <div class="card-arabic">هواء</div>
+                <div class="card-english">Air</div>
+            </div>
+            <!-- Card 7 -->
+            <div class="card" style="background-color: #FCBAD3;">
+                <div class="card-arabic">ورد</div>
+                <div class="card-english">Flower</div>
+            </div>
+            <!-- Card 8 -->
+            <div class="card" style="background-color: #A8D8EA;">
+                <div class="card-arabic">سماء</div>
+                <div class="card-english">Sky</div>
+            </div>
+            <!-- Card 9 -->
+            <div class="card" style="background-color: #FF9999;">
+                <div class="card-arabic">قمر</div>
+                <div class="card-english">Moon</div>
+            </div>
+            <!-- Card 10 -->
+            <div class="card" style="background-color: #90EE90;">
+                <div class="card-arabic">شجرة</div>
+                <div class="card-english">Tree</div>
+            </div>
+            <!-- Card 11 -->
+            <div class="card" style="background-color: #87CEEB;">
+                <div class="card-arabic">بيت</div>
+                <div class="card-english">House</div>
+            </div>
+            <!-- Card 12 -->
+            <div class="card" style="background-color: #DDA0DD;">
+                <div class="card-arabic">باب</div>
+                <div class="card-english">Door</div>
+            </div>
+            <!-- Card 13 -->
+            <div class="card" style="background-color: #F0E68C;">
+                <div class="card-arabic">نافذة</div>
+                <div class="card-english">Window</div>
+            </div>
+            <!-- Card 14 -->
+            <div class="card" style="background-color: #FFB6C1;">
+                <div class="card-arabic">كرسي</div>
+                <div class="card-english">Chair</div>
+            </div>
+            <!-- Card 15 -->
+            <div class="card" style="background-color: #98FB98;">
+                <div class="card-arabic">طاولة</div>
+                <div class="card-english">Table</div>
+            </div>
+            <!-- Card 16 -->
+            <div class="card" style="background-color: #FFD700;">
+                <div class="card-arabic">خبز</div>
+                <div class="card-english">Bread</div>
+            </div>
+            <!-- Card 17 -->
+            <div class="card" style="background-color: #FF69B4;">
+                <div class="card-arabic">تفاح</div>
+                <div class="card-english">Apple</div>
+            </div>
+            <!-- Card 18 -->
+            <div class="card" style="background-color: #1E90FF;">
+                <div class="card-arabic">برتقال</div>
+                <div class="card-english">Orange</div>
+            </div>
+            <!-- Card 19 -->
+            <div class="card" style="background-color: #32CD32;">
+                <div class="card-arabic">موز</div>
+                <div class="card-english">Banana</div>
+            </div>
+            <!-- Card 20 -->
+            <div class="card" style="background-color: #FF8C00;">
+                <div class="card-arabic">لحم</div>
+                <div class="card-english">Meat</div>
+            </div>
+            <!-- Card 21 -->
+            <div class="card" style="background-color: #20B2AA;">
+                <div class="card-arabic">سمك</div>
+                <div class="card-english">Fish</div>
+            </div>
+            <!-- Card 22 -->
+            <div class="card" style="background-color: #9370DB;">
+                <div class="card-arabic">عصير</div>
+                <div class="card-english">Juice</div>
+            </div>
+            <!-- Card 23 -->
+            <div class="card" style="background-color: #FF7F50;">
+                <div class="card-arabic">قهوة</div>
+                <div class="card-english">Coffee</div>
+            </div>
+            <!-- Card 24 -->
+            <div class="card" style="background-color: #3CB371;">
+                <div class="card-arabic">شاي</div>
+                <div class="card-english">Tea</div>
+            </div>
+            <!-- Card 25 -->
+            <div class="card" style="background-color: #DC143C;">
+                <div class="card-arabic">حمراء</div>
+                <div class="card-english">Red</div>
+            </div>
+            <!-- Card 26 -->
+            <div class="card" style="background-color: #0047AB;">
+                <div class="card-arabic">أزرق</div>
+                <div class="card-english">Blue</div>
+            </div>
+            <!-- Card 27 -->
+            <div class="card" style="background-color: #228B22;">
+                <div class="card-arabic">أخضر</div>
+                <div class="card-english">Green</div>
+            </div>
+            <!-- Card 28 -->
+            <div class="card" style="background-color: #FFD700;">
+                <div class="card-arabic">أصفر</div>
+                <div class="card-english">Yellow</div>
+            </div>
+            <!-- Card 29 -->
+            <div class="card" style="background-color: #8B4513;">
+                <div class="card-arabic">بني</div>
+                <div class="card-english">Brown</div>
+            </div>
+            <!-- Card 30 -->
+            <div class="card" style="background-color: #000000;">
+                <div class="card-arabic">أسود</div>
+                <div class="card-english">Black</div>
+            </div>
+            <!-- Card 31 -->
+            <div class="card" style="background-color: #FFFFFF; color: #333;">
+                <div class="card-arabic">أبيض</div>
+                <div class="card-english">White</div>
+            </div>
+            <!-- Card 32 -->
+            <div class="card" style="background-color: #800080;">
+                <div class="card-arabic">أرجواني</div>
+                <div class="card-english">Purple</div>
+            </div>
+            <!-- Card 33 -->
+            <div class="card" style="background-color: #FFC0CB;">
+                <div class="card-arabic">وردي</div>
+                <div class="card-english">Pink</div>
+            </div>
+            <!-- Card 34 -->
+            <div class="card" style="background-color: #A9A9A9;">
+                <div class="card-arabic">رمادي</div>
+                <div class="card-english">Gray</div>
+            </div>
+            <!-- Card 35 -->
+            <div class="card" style="background-color: #FF4500;">
+                <div class="card-arabic">برتقالي</div>
+                <div class="card-english">Orange</div>
+            </div>
+            <!-- Card 36 -->
+            <div class="card" style="background-color: #6B4226;">
+                <div class="card-arabic">كبير</div>
+                <div class="card-english">Big</div>
+            </div>
+            <!-- Card 37 -->
+            <div class="card" style="background-color: #A0522D;">
+                <div class="card-arabic">صغير</div>
+                <div class="card-english">Small</div>
+            </div>
+            <!-- Card 38 -->
+            <div class="card" style="background-color: #DAA520;">
+                <div class="card-arabic">طويل</div>
+                <div class="card-english">Long</div>
+            </div>
+            <!-- Card 39 -->
+            <div class="card" style="background-color: #CD5C5C;">
+                <div class="card-arabic">قصير</div>
+                <div class="card-english">Short</div>
+            </div>
+            <!-- Card 40 -->
+            <div class="card" style="background-color: #F08080;">
+                <div class="card-arabic">سريع</div>
+                <div class="card-english">Fast</div>
+            </div>
+            <!-- Card 41 -->
+            <div class="card" style="background-color: #B0C4DE;">
+                <div class="card-arabic">بطيء</div>
+                <div class="card-english">Slow</div>
+            </div>
+            <!-- Card 42 -->
+            <div class="card" style="background-color: #5F9EA0;">
+                <div class="card-arabic">ساخن</div>
+                <div class="card-english">Hot</div>
+            </div>
+            <!-- Card 43 -->
+            <div class="card" style="background-color: #6495ED;">
+                <div class="card-arabic">بارد</div>
+                <div class="card-english">Cold</div>
+            </div>
+            <!-- Card 44 -->
+            <div class="card" style="background-color: #00CED1;">
+                <div class="card-arabic">حلو</div>
+                <div class="card-english">Sweet</div>
+            </div>
+            <!-- Card 45 -->
+            <div class="card" style="background-color: #2E8B57;">
+                <div class="card-arabic">مر</div>
+                <div class="card-english">Bitter</div>
+            </div>
+            <!-- Card 46 -->
+            <div class="card" style="background-color: #ADFF2F;">
+                <div class="card-arabic">مالح</div>
+                <div class="card-english">Salty</div>
+            </div>
+            <!-- Card 47 -->
+            <div class="card" style="background-color: #FF1493;">
+                <div class="card-arabic">رائحة</div>
+                <div class="card-english">Smell</div>
+            </div>
+            <!-- Card 48 -->
+            <div class="card" style="background-color: #00FA9A;">
+                <div class="card-arabic">صوت</div>
+                <div class="card-english">Sound</div>
+            </div>
+            <!-- Card 49 -->
+            <div class="card" style="background-color: #4169E1;">
+                <div class="card-arabic">رؤية</div>
+                <div class="card-english">Vision</div>
+            </div>
+            <!-- Card 50 -->
+            <div class="card" style="background-color: #DC143C;">
+                <div class="card-arabic">حب</div>
+                <div class="card-english">Love</div>
+            </div>
+            <!-- Card 51 -->
+            <div class="card" style="background-color: #FFB90F;">
+                <div class="card-arabic">فرح</div>
+                <div class="card-english">Happy</div>
+            </div>
+            <!-- Card 52 -->
+            <div class="card" style="background-color: #8B008B;">
+                <div class="card-arabic">حزن</div>
+                <div class="card-english">Sad</div>
+            </div>
+            <!-- Card 53 -->
+            <div class="card" style="background-color: #FF6347;">
+                <div class="card-arabic">غضب</div>
+                <div class="card-english">Anger</div>
+            </div>
+            <!-- Card 54 -->
+            <div class="card" style="background-color: #7FFF00;">
+                <div class="card-arabic">أمل</div>
+                <div class="card-english">Hope</div>
+            </div>
+            <!-- Card 55 -->
+            <div class="card" style="background-color: #00BFFF;">
+                <div class="card-arabic">خوف</div>
+                <div class="card-english">Fear</div>
+            </div>
+            <!-- Card 56 -->
+            <div class="card" style="background-color: #EE82EE;">
+                <div class="card-arabic">سلام</div>
+                <div class="card-english">Peace</div>
+            </div>
+            <!-- Card 57 -->
+            <div class="card" style="background-color: #F0FFFF;">
+                <div class="card-arabic">أسرة</div>
+                <div class="card-english">Family</div>
+            </div>
+            <!-- Card 58 -->
+            <div class="card" style="background-color: #FFE4B5;">
+                <div class="card-arabic">صديق</div>
+                <div class="card-english">Friend</div>
+            </div>
+            <!-- Card 59 -->
+            <div class="card" style="background-color: #DEB887;">
+                <div class="card-arabic">معلم</div>
+                <div class="card-english">Teacher</div>
+            </div>
+            <!-- Card 60 -->
+            <div class="card" style="background-color: #6A5ACD;">
+                <div class="card-arabic">علم</div>
+                <div class="card-english">Knowledge</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Learnydays. All rights reserved. | Powered by GitHub Pages</p>
+    </footer>
+</body>
+</html>

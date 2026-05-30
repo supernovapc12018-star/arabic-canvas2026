@@ -144,6 +144,32 @@
             max-width: 260px;
         }
 
+        .back-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .toggle-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 8px;
+        }
+
+        .toggle-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .cards-grid {
@@ -205,66 +231,66 @@
 
     <script>
         const cardData = [
-            { arabic: 'كتاب', english: 'Book', color: '#FF6B6B', emoji: '📚', description: 'A book is full of stories, facts, and lessons.' },
-            { arabic: 'قلم', english: 'Pen', color: '#4ECDC4', emoji: '🖊️', description: 'A pen writes words and helps learners practice.' },
-            { arabic: 'شمس', english: 'Sun', color: '#FFE66D', emoji: '☀️', description: 'The sun shines brightly and warms the earth.' },
-            { arabic: 'ماء', english: 'Water', color: '#95E1D3', emoji: '💧', description: 'Water is essential for drinking and staying healthy.' },
-            { arabic: 'نار', english: 'Fire', color: '#F38181', emoji: '🔥', description: 'Fire is hot and can help cook food or warm a room.' },
-            { arabic: 'هواء', english: 'Air', color: '#AA96DA', emoji: '💨', description: 'Air is the invisible wind we breathe every day.' },
-            { arabic: 'ورد', english: 'Flower', color: '#FCBAD3', emoji: '🌹', description: 'A flower is colorful and often smells very sweet.' },
-            { arabic: 'سماء', english: 'Sky', color: '#A8D8EA', emoji: '🌤️', description: 'The sky can be blue in the day and dark at night.' },
-            { arabic: 'قمر', english: 'Moon', color: '#FF9999', emoji: '🌙', description: 'The moon shines at night and changes shape each month.' },
-            { arabic: 'شجرة', english: 'Tree', color: '#90EE90', emoji: '🌳', description: 'A tree grows tall and gives shade and fresh air.' },
-            { arabic: 'بيت', english: 'House', color: '#87CEEB', emoji: '🏠', description: 'A house is where a family lives and feels safe.' },
-            { arabic: 'باب', english: 'Door', color: '#DDA0DD', emoji: '🚪', description: 'A door opens and closes to enter a room or house.' },
-            { arabic: 'نافذة', english: 'Window', color: '#F0E68C', emoji: '🪟', description: 'A window lets light into a room and shows the outside.' },
-            { arabic: 'كرسي', english: 'Chair', color: '#FFB6C1', emoji: '🪑', description: 'A chair is used to sit down comfortably at a table.' },
-            { arabic: 'طاولة', english: 'Table', color: '#98FB98', emoji: '🛋️', description: 'A table holds books, food, and other useful things.' },
-            { arabic: 'خبز', english: 'Bread', color: '#FFD700', emoji: '🍞', description: 'Bread is a staple food often eaten with meals.' },
-            { arabic: 'تفاح', english: 'Apple', color: '#FF69B4', emoji: '🍎', description: 'An apple is a sweet fruit that is healthy to eat.' },
-            { arabic: 'برتقال', english: 'Orange', color: '#1E90FF', emoji: '🍊', description: 'An orange is juicy and full of vitamin C.' },
-            { arabic: 'موز', english: 'Banana', color: '#32CD32', emoji: '🍌', description: 'A banana is a yellow fruit that is soft and sweet.' },
-            { arabic: 'لحم', english: 'Meat', color: '#FF8C00', emoji: '🍖', description: 'Meat is a protein-rich food many people enjoy.' },
-            { arabic: 'سمك', english: 'Fish', color: '#20B2AA', emoji: '🐟', description: 'Fish swim in water and are often eaten as food.' },
-            { arabic: 'عصير', english: 'Juice', color: '#9370DB', emoji: '🧃', description: 'Juice is a refreshing drink made from fruits.' },
-            { arabic: 'قهوة', english: 'Coffee', color: '#FF7F50', emoji: '☕', description: 'Coffee is a hot drink enjoyed in the morning.' },
-            { arabic: 'شاي', english: 'Tea', color: '#3CB371', emoji: '🍵', description: 'Tea is a warm drink served with sugar or milk.' },
-            { arabic: 'حمراء', english: 'Red', color: '#DC143C', emoji: '🔴', description: 'Red is a bright color like ripe strawberries.' },
-            { arabic: 'أزرق', english: 'Blue', color: '#0047AB', emoji: '🔵', description: 'Blue is the color of the ocean and the daytime sky.' },
-            { arabic: 'أخضر', english: 'Green', color: '#228B22', emoji: '🟢', description: 'Green is the color of leaves and grass.' },
-            { arabic: 'أصفر', english: 'Yellow', color: '#FFD700', emoji: '🟡', description: 'Yellow is a warm color like the sun or a lemon.' },
-            { arabic: 'بني', english: 'Brown', color: '#8B4513', emoji: '🟤', description: 'Brown is the color of tree trunks and soil.' },
-            { arabic: 'أسود', english: 'Black', color: '#000000', emoji: '⚫', description: 'Black is a strong color often used for text.' },
-            { arabic: 'أبيض', english: 'White', color: '#FFFFFF', emoji: '⚪', description: 'White is a clean color that reflects light.' },
-            { arabic: 'أرجواني', english: 'Purple', color: '#800080', emoji: '🟣', description: 'Purple is a royal color that feels elegant.' },
-            { arabic: 'وردي', english: 'Pink', color: '#FFC0CB', emoji: '🌸', description: 'Pink is a soft color often used for flowers.' },
-            { arabic: 'رمادي', english: 'Gray', color: '#A9A9A9', emoji: '⬜', description: 'Gray is a neutral color between black and white.' },
-            { arabic: 'برتقالي', english: 'Orange', color: '#FF4500', emoji: '🟠', description: 'Orange is a color and also a tasty citrus fruit.' },
-            { arabic: 'كبير', english: 'Big', color: '#6B4226', emoji: '🦁', description: 'Big means large in size or greater than small.' },
-            { arabic: 'صغير', english: 'Small', color: '#A0522D', emoji: '🐭', description: 'Small means little in size or tiny to hold.' },
-            { arabic: 'طويل', english: 'Long', color: '#DAA520', emoji: '📏', description: 'Long describes something that stretches far.' },
-            { arabic: 'قصير', english: 'Short', color: '#CD5C5C', emoji: '✂️', description: 'Short describes something that is not very long.' },
-            { arabic: 'سريع', english: 'Fast', color: '#F08080', emoji: '🏎️', description: 'Fast means moving quickly like a race car.' },
-            { arabic: 'بطيء', english: 'Slow', color: '#B0C4DE', emoji: '🐢', description: 'Slow means moving gently and taking time.' },
-            { arabic: 'ساخن', english: 'Hot', color: '#5F9EA0', emoji: '🌶️', description: 'Hot means very warm, like spicy food or sun.' },
-            { arabic: 'بارد', english: 'Cold', color: '#6495ED', emoji: '❄️', description: 'Cold means low temperature, like ice and snow.' },
-            { arabic: 'حلو', english: 'Sweet', color: '#00CED1', emoji: '🍭', description: 'Sweet tastes sugary and delicious like candy.' },
-            { arabic: 'مر', english: 'Bitter', color: '#2E8B57', emoji: '🍫', description: 'Bitter is a strong taste found in dark chocolate.' },
-            { arabic: 'مالح', english: 'Salty', color: '#ADFF2F', emoji: '🥨', description: 'Salty tastes like the sea or salted snacks.' },
-            { arabic: 'رائحة', english: 'Smell', color: '#FF1493', emoji: '🌸', description: 'Smell is what we notice when we sniff flowers or food.' },
-            { arabic: 'صوت', english: 'Sound', color: '#00FA9A', emoji: '🔊', description: 'Sound is what we hear from music, voices, and nature.' },
-            { arabic: 'رؤية', english: 'Vision', color: '#4169E1', emoji: '👀', description: 'Vision is what our eyes use to see the world.' },
-            { arabic: 'حب', english: 'Love', color: '#DC143C', emoji: '❤️', description: 'Love is a warm feeling when we care about others.' },
-            { arabic: 'فرح', english: 'Happy', color: '#FFB90F', emoji: '😊', description: 'Happy means feeling joyful, excited, and smiley.' },
-            { arabic: 'حزن', english: 'Sad', color: '#8B008B', emoji: '😔', description: 'Sad means feeling down or missing something important.' },
-            { arabic: 'غضب', english: 'Anger', color: '#FF6347', emoji: '😠', description: 'Anger is a strong emotion when someone is upset.' },
-            { arabic: 'أمل', english: 'Hope', color: '#7FFF00', emoji: '✨', description: 'Hope is believing good things can still happen.' },
-            { arabic: 'خوف', english: 'Fear', color: '#00BFFF', emoji: '😨', description: 'Fear is the feeling we get when we are afraid.' },
-            { arabic: 'سلام', english: 'Peace', color: '#EE82EE', emoji: '☮️', description: 'Peace means calmness, quiet, and feeling rested.' },
-            { arabic: 'أسرة', english: 'Family', color: '#F0FFFF', emoji: '👪', description: 'Family is a group of people who love and support each other.' },
-            { arabic: 'صديق', english: 'Friend', color: '#FFE4B5', emoji: '🤝', description: 'A friend is someone who shares fun times and trust.' },
-            { arabic: 'معلم', english: 'Teacher', color: '#DEB887', emoji: '👩‍🏫', description: 'A teacher helps students learn new words and ideas.' },
-            { arabic: 'علم', english: 'Knowledge', color: '#6A5ACD', emoji: '📘', description: 'Knowledge is what we gain from learning and practicing.' }
+            { arabic: 'كِتَاب', english: 'Book', color: '#FF6B6B', emoji: '📚', description: 'A book is full of stories, facts, and lessons.', arabicDesc: 'الكتاب مليء بالقصص والحقائق والدروس الجديدة.' },
+            { arabic: 'قَلَم', english: 'Pen', color: '#4ECDC4', emoji: '🖊️', description: 'A pen writes words and helps learners practice.', arabicDesc: 'القلم يكتب الكلمات ويساعد المتعلمين على الممارسة.' },
+            { arabic: 'شَمْس', english: 'Sun', color: '#FFE66D', emoji: '☀️', description: 'The sun shines brightly and warms the earth.', arabicDesc: 'الشمس تلمع بشدة وتدفئ الأرض والعالم من حولنا.' },
+            { arabic: 'مَاء', english: 'Water', color: '#95E1D3', emoji: '💧', description: 'Water is essential for drinking and staying healthy.', arabicDesc: 'الماء ضروري للشرب والبقاء بصحة جيدة وسليمة.' },
+            { arabic: 'نَار', english: 'Fire', color: '#F38181', emoji: '🔥', description: 'Fire is hot and can help cook food or warm a room.', arabicDesc: 'النار ساخنة جداً وتساعد على طهي الطعام وتدفئة الغرف.' },
+            { arabic: 'هَوَاء', english: 'Air', color: '#AA96DA', emoji: '💨', description: 'Air is the invisible wind we breathe every day.', arabicDesc: 'الهواء هو الريح غير المرئية التي نتنفسها كل يوم.' },
+            { arabic: 'وَرْد', english: 'Flower', color: '#FCBAD3', emoji: '🌹', description: 'A flower is colorful and often smells very sweet.', arabicDesc: 'الزهرة ملونة جداً وغالباً ما تشم برائحة جميلة وعطرة.' },
+            { arabic: 'سَمَاء', english: 'Sky', color: '#A8D8EA', emoji: '🌤️', description: 'The sky can be blue in the day and dark at night.', arabicDesc: 'السماء زرقاء أثناء النهار وسوداء أثناء الليل.' },
+            { arabic: 'قَمَر', english: 'Moon', color: '#FF9999', emoji: '🌙', description: 'The moon shines at night and changes shape each month.', arabicDesc: 'القمر يشرق بالليل ويتغير شكله كل شهر من الشهور.' },
+            { arabic: 'شَجَرَة', english: 'Tree', color: '#90EE90', emoji: '🌳', description: 'A tree grows tall and gives shade and fresh air.', arabicDesc: 'الشجرة تنمو عالية جداً وتعطي ظلاً وهواءً نقياً.' },
+            { arabic: 'بَيْت', english: 'House', color: '#87CEEB', emoji: '🏠', description: 'A house is where a family lives and feels safe.', arabicDesc: 'البيت هو المكان الذي تعيش فيه الأسرة وتشعر بالأمان.' },
+            { arabic: 'بَاب', english: 'Door', color: '#DDA0DD', emoji: '🚪', description: 'A door opens and closes to enter a room or house.', arabicDesc: 'الباب يُفتح ويُغلق للدخول إلى الغرفة أو البيت.' },
+            { arabic: 'نَافِذَة', english: 'Window', color: '#F0E68C', emoji: '🪟', description: 'A window lets light into a room and shows the outside.', arabicDesc: 'النافذة تدخل الضوء إلى الغرفة وتريك ما بالخارج.' },
+            { arabic: 'كُرْسِي', english: 'Chair', color: '#FFB6C1', emoji: '🪑', description: 'A chair is used to sit down comfortably at a table.', arabicDesc: 'الكرسي يُستخدم للجلوس بارتياح على الطاولة.' },
+            { arabic: 'طَاوِلَة', english: 'Table', color: '#98FB98', emoji: '🛋️', description: 'A table holds books, food, and other useful things.', arabicDesc: 'الطاولة تحمل الكتب والطعام والأشياء المفيدة الأخرى.' },
+            { arabic: 'خُبْز', english: 'Bread', color: '#FFD700', emoji: '🍞', description: 'Bread is a staple food often eaten with meals.', arabicDesc: 'الخبز طعام أساسي يُؤكل مع الوجبات جميع الأيام.' },
+            { arabic: 'تُفَّاح', english: 'Apple', color: '#FF69B4', emoji: '🍎', description: 'An apple is a sweet fruit that is healthy to eat.', arabicDesc: 'التفاح فاكهة حلوة وصحية جداً للأكل والشرب.' },
+            { arabic: 'بُرْتُقَال', english: 'Orange', color: '#1E90FF', emoji: '🍊', description: 'An orange is juicy and full of vitamin C.', arabicDesc: 'البرتقال عصيري وممتلئ بفيتامين سي المهم جداً.' },
+            { arabic: 'مَوْز', english: 'Banana', color: '#32CD32', emoji: '🍌', description: 'A banana is a yellow fruit that is soft and sweet.', arabicDesc: 'الموز فاكهة صفراء طرية وحلوة جداً والطعم لذيذ.' },
+            { arabic: 'لَحْم', english: 'Meat', color: '#FF8C00', emoji: '🍖', description: 'Meat is a protein-rich food many people enjoy.', arabicDesc: 'اللحم غذاء غني بالبروتين يستمتع به كثير من الناس.' },
+            { arabic: 'سَمَك', english: 'Fish', color: '#20B2AA', emoji: '🐟', description: 'Fish swim in water and are often eaten as food.', arabicDesc: 'السمك يسبح في الماء وغالباً ما يُؤكل كغذاء.' },
+            { arabic: 'عَصِير', english: 'Juice', color: '#9370DB', emoji: '🧃', description: 'Juice is a refreshing drink made from fruits.', arabicDesc: 'العصير مشروب منعش يُصنع من الفواكه المختلفة.' },
+            { arabic: 'قَهْوَة', english: 'Coffee', color: '#FF7F50', emoji: '☕', description: 'Coffee is a hot drink enjoyed in the morning.', arabicDesc: 'القهوة مشروب ساخن يُستمتع به في الصباح.' },
+            { arabic: 'شَاي', english: 'Tea', color: '#3CB371', emoji: '🍵', description: 'Tea is a warm drink served with sugar or milk.', arabicDesc: 'الشاي مشروب دافئ يُقدم مع السكر أو الحليب.' },
+            { arabic: 'حَمْرَاء', english: 'Red', color: '#DC143C', emoji: '🔴', description: 'Red is a bright color like ripe strawberries.', arabicDesc: 'الحمراء لون زاهي مثل الفراولة الناضجة جداً.' },
+            { arabic: 'أَزْرَق', english: 'Blue', color: '#0047AB', emoji: '🔵', description: 'Blue is the color of the ocean and the daytime sky.', arabicDesc: 'الأزرق هو لون المحيط والسماء أثناء النهار.' },
+            { arabic: 'أَخْضَر', english: 'Green', color: '#228B22', emoji: '🟢', description: 'Green is the color of leaves and grass.', arabicDesc: 'الأخضر هو لون الأوراق والعشب والطبيعة.' },
+            { arabic: 'أَصْفَر', english: 'Yellow', color: '#FFD700', emoji: '🟡', description: 'Yellow is a warm color like the sun or a lemon.', arabicDesc: 'الأصفر لون دافئ مثل الشمس أو الليمون.' },
+            { arabic: 'بُنِي', english: 'Brown', color: '#8B4513', emoji: '🟤', description: 'Brown is the color of tree trunks and soil.', arabicDesc: 'البني هو لون جذوع الأشجار والتربة والأرض.' },
+            { arabic: 'أَسْوَد', english: 'Black', color: '#000000', emoji: '⚫', description: 'Black is a strong color often used for text.', arabicDesc: 'الأسود لون قوي يُستخدم غالباً للنصوص والكتابة.' },
+            { arabic: 'أَبْيَض', english: 'White', color: '#FFFFFF', emoji: '⚪', description: 'White is a clean color that reflects light.', arabicDesc: 'الأبيض لون نظيف يعكس الضوء بشكل كبير جداً.' },
+            { arabic: 'أُرْجُوَانِي', english: 'Purple', color: '#800080', emoji: '🟣', description: 'Purple is a royal color that feels elegant.', arabicDesc: 'البنفسجي لون ملكي يبدو أنيقاً وجميلاً جداً.' },
+            { arabic: 'وَرْدِي', english: 'Pink', color: '#FFC0CB', emoji: '🌸', description: 'Pink is a soft color often used for flowers.', arabicDesc: 'الوردي لون ناعم يُستخدم غالباً للزهور.' },
+            { arabic: 'رَمَادِي', english: 'Gray', color: '#A9A9A9', emoji: '⬜', description: 'Gray is a neutral color between black and white.', arabicDesc: 'الرمادي لون محايد بين الأسود والأبيض.' },
+            { arabic: 'بُرْتُقَالِي', english: 'Orange', color: '#FF4500', emoji: '🟠', description: 'Orange is a color and also a tasty citrus fruit.', arabicDesc: 'البرتقالي لون وأيضاً فاكهة حمضية لذيذة جداً.' },
+            { arabic: 'كَبِير', english: 'Big', color: '#6B4226', emoji: '🦁', description: 'Big means large in size or greater than small.', arabicDesc: 'الكبير يعني أكبر في الحجم من الصغير.' },
+            { arabic: 'صَغِير', english: 'Small', color: '#A0522D', emoji: '🐭', description: 'Small means little in size or tiny to hold.', arabicDesc: 'الصغير يعني صغير الحجم أو دقيق جداً.' },
+            { arabic: 'طَوِيل', english: 'Long', color: '#DAA520', emoji: '📏', description: 'Long describes something that stretches far.', arabicDesc: 'الطويل يصف شيء ما يمتد بعيداً جداً.' },
+            { arabic: 'قَصِير', english: 'Short', color: '#CD5C5C', emoji: '✂️', description: 'Short describes something that is not very long.', arabicDesc: 'القصير يصف شيء ما ليس طويلاً جداً.' },
+            { arabic: 'سَرِيع', english: 'Fast', color: '#F08080', emoji: '🏎️', description: 'Fast means moving quickly like a race car.', arabicDesc: 'السريع يعني التحرك بسرعة مثل سيارة السباق.' },
+            { arabic: 'بَطِيء', english: 'Slow', color: '#B0C4DE', emoji: '🐢', description: 'Slow means moving gently and taking time.', arabicDesc: 'البطيء يعني التحرك برفق وأخذ الوقت الكافي.' },
+            { arabic: 'سَاخِن', english: 'Hot', color: '#5F9EA0', emoji: '🌶️', description: 'Hot means very warm, like spicy food or sun.', arabicDesc: 'الساخن يعني شيء دافئ جداً مثل الطعام الحار.' },
+            { arabic: 'بَارِد', english: 'Cold', color: '#6495ED', emoji: '❄️', description: 'Cold means low temperature, like ice and snow.', arabicDesc: 'البارد يعني درجة حرارة منخفضة مثل الثلج.' },
+            { arabic: 'حُلْو', english: 'Sweet', color: '#00CED1', emoji: '🍭', description: 'Sweet tastes sugary and delicious like candy.', arabicDesc: 'الحلو طعم سكري لذيذ مثل الحلويات.' },
+            { arabic: 'مُرّ', english: 'Bitter', color: '#2E8B57', emoji: '🍫', description: 'Bitter is a strong taste found in dark chocolate.', arabicDesc: 'المرّ طعم قوي موجود في الشوكولاتة السوداء.' },
+            { arabic: 'مَالِح', english: 'Salty', color: '#ADFF2F', emoji: '🥨', description: 'Salty tastes like the sea or salted snacks.', arabicDesc: 'المالح يطعم مثل البحر أو الوجبات المملحة.' },
+            { arabic: 'رَائِحَة', english: 'Smell', color: '#FF1493', emoji: '🌸', description: 'Smell is what we notice when we sniff flowers or food.', arabicDesc: 'الرائحة ما نلاحظها عندما نشتم الزهور والطعام.' },
+            { arabic: 'صَوْت', english: 'Sound', color: '#00FA9A', emoji: '🔊', description: 'Sound is what we hear from music, voices, and nature.', arabicDesc: 'الصوت ما نسمعه من الموسيقى والأصوات الطبيعية.' },
+            { arabic: 'رُؤْيَة', english: 'Vision', color: '#4169E1', emoji: '👀', description: 'Vision is what our eyes use to see the world.', arabicDesc: 'الرؤية ما تستخدمه أعيننا لرؤية العالم.' },
+            { arabic: 'حُبّ', english: 'Love', color: '#DC143C', emoji: '❤️', description: 'Love is a warm feeling when we care about others.', arabicDesc: 'الحب شعور دافئ عندما نهتم بالآخرين.' },
+            { arabic: 'فَرَح', english: 'Happy', color: '#FFB90F', emoji: '😊', description: 'Happy means feeling joyful, excited, and smiley.', arabicDesc: 'الفرح يعني الشعور بالفرح والسعادة والابتسامة.' },
+            { arabic: 'حُزْن', english: 'Sad', color: '#8B008B', emoji: '😔', description: 'Sad means feeling down or missing something important.', arabicDesc: 'الحزن يعني الشعور بالحنين أو افتقاد أمر مهم.' },
+            { arabic: 'غَضَب', english: 'Anger', color: '#FF6347', emoji: '😠', description: 'Anger is a strong emotion when someone is upset.', arabicDesc: 'الغضب عاطفة قوية عندما يكون الشخص منزعجاً.' },
+            { arabic: 'أَمَل', english: 'Hope', color: '#7FFF00', emoji: '✨', description: 'Hope is believing good things can still happen.', arabicDesc: 'الأمل هو الاعتقاد بأن أشياء جيدة ستحدث.' },
+            { arabic: 'خَوْف', english: 'Fear', color: '#00BFFF', emoji: '😨', description: 'Fear is the feeling we get when we are afraid.', arabicDesc: 'الخوف شعور نشعر به عندما نكون خائفين.' },
+            { arabic: 'سَلَام', english: 'Peace', color: '#EE82EE', emoji: '☮️', description: 'Peace means calmness, quiet, and feeling rested.', arabicDesc: 'السلام يعني الهدوء والسكون والشعور بالراحة.' },
+            { arabic: 'أُسْرَة', english: 'Family', color: '#F0FFFF', emoji: '👪', description: 'Family is a group of people who love and support each other.', arabicDesc: 'الأسرة مجموعة من الناس يحبون ويدعمون بعضهم.' },
+            { arabic: 'صَدِيق', english: 'Friend', color: '#FFE4B5', emoji: '🤝', description: 'A friend is someone who shares fun times and trust.', arabicDesc: 'الصديق شخص يشاركك أوقات المرح والثقة.' },
+            { arabic: 'مُعَلِّم', english: 'Teacher', color: '#DEB887', emoji: '👩‍🏫', description: 'A teacher helps students learn new words and ideas.', arabicDesc: 'المعلم يساعد الطلاب على تعلم كلمات وأفكار جديدة.' },
+            { arabic: 'عِلْم', english: 'Knowledge', color: '#6A5ACD', emoji: '📘', description: 'Knowledge is what we gain from learning and practicing.', arabicDesc: 'العلم ما نكتسبه من التعلم والممارسة المستمرة.' }
         ];
 
         const cardsGrid = document.getElementById('cardsGrid');
@@ -274,10 +300,11 @@
             return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
         }
 
-        cardData.forEach(card => {
+        cardData.forEach((card, index) => {
             const cardContainer = document.createElement('div');
             cardContainer.className = 'card-container';
             cardContainer.tabIndex = 0;
+            const uniqueId = `desc-toggle-${index}`;
             cardContainer.innerHTML = `
                 <div class="card-inner" style="--card-color: ${card.color};">
                     <div class="card-face front">
@@ -288,12 +315,30 @@
                         <div class="card-english">${card.english}</div>
                     </div>
                     <div class="card-face back">
-                        <div class="card-arabic" style="font-size: 1.8rem;">${card.arabic}</div>
-                        <div class="card-english">${card.english}</div>
-                        <div class="card-description">${card.description}</div>
+                        <div class="back-content">
+                            <button class="toggle-btn" data-id="${uniqueId}">عربي / English</button>
+                            <div class="card-arabic" style="font-size: 1.6rem; margin-bottom: 10px;">${card.arabic}</div>
+                            <div class="card-english" style="margin-bottom: 8px;">${card.english}</div>
+                            <div class="card-description" id="${uniqueId}-en">${card.description}</div>
+                            <div class="card-description" id="${uniqueId}-ar" style="display: none; direction: rtl;">${card.arabicDesc}</div>
+                        </div>
                     </div>
                 </div>
             `;
+
+            const toggleBtn = cardContainer.querySelector('.toggle-btn');
+            toggleBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const enDesc = document.getElementById(`${uniqueId}-en`);
+                const arDesc = document.getElementById(`${uniqueId}-ar`);
+                if (enDesc.style.display === 'none') {
+                    enDesc.style.display = 'block';
+                    arDesc.style.display = 'none';
+                } else {
+                    enDesc.style.display = 'none';
+                    arDesc.style.display = 'block';
+                }
+            });
 
             cardContainer.addEventListener('click', () => {
                 cardContainer.classList.toggle('flipped');
@@ -309,8 +354,6 @@
             cardsGrid.appendChild(cardContainer);
         });
     </script>
-
-    <footer>
         <p>&copy; 2026 Learnydays. All rights reserved. | Powered by GitHub Pages</p>
     </footer>
 </body>
